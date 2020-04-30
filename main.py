@@ -43,9 +43,17 @@ def start():
                                "random_id": random.randint(1, 2147483647)})
                     vk.method("messages.send",
                               {"peer_id": id, "message": m, "random_id": random.randint(1, 2147483647)})
+                elif body.lower() == "menu":
+                    vk.method("messages.send",
+                              {"peer_id": id, "message": choise, "random_id": random.randint(1, 2147483647)})
+                    for i in games:
+                        vk.method("messages.send",
+                                  {"peer_id": id, "message": i, "random_id": random.randint(1, 2147483647)})
                 else:
                     vk.method("messages.send",
                               {"peer_id": id, "message": "Не понял тебя!",  "random_id": random.randint(1, 2147483647)})
+                    vk.method("messages.send",
+                              {"peer_id": id, "message": m, "random_id": random.randint(1, 2147483647)})
         except Exception as E:
             time.sleep(1)
 
@@ -63,22 +71,24 @@ def samp():
                                 {"peer_id": id, "message": i,  "random_id": random.randint(1, 2147483647)})
                     vk.method("messages.send",
                               {"peer_id": id, "message": m, "random_id": random.randint(1, 2147483647)})
-                    vk.method("messages.send",
-                              {"peer_id": id, "message": m, "random_id": random.randint(1, 2147483647)})
                 elif body.lower() == "menu":
                     vk.method("messages.send",
                               {"peer_id": id, "message": choise, "random_id": random.randint(1, 2147483647)})
-                elif body.lower() == "чистая гта + samp":
-                    vk.method("messages.send",
-                              {"peer_id": id, "message": 'Раздел в разработке',
-                               "random_id": random.randint(1, 2147483647)})
                     for i in games:
                         vk.method("messages.send",
                                   {"peer_id": id, "message": i, "random_id": random.randint(1, 2147483647)})
                     start()
+                elif body.lower() == "чистая гта + самп":
+                    vk.method("messages.send",
+                              {"peer_id": id, "message": 'Раздел в разработке',
+                               "random_id": random.randint(1, 2147483647)})
+                    vk.method("messages.send",
+                              {"peer_id": id, "message": m, "random_id": random.randint(1, 2147483647)})
                 else:
                     vk.method("messages.send",
                               {"peer_id": id, "message": "Не понял тебя!",  "random_id": random.randint(1, 2147483647)})
+                    vk.method("messages.send",
+                              {"peer_id": id, "message": m, "random_id": random.randint(1, 2147483647)})
         except Exception as E:
             time.sleep(1)
 
