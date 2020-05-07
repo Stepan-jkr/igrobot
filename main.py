@@ -15,8 +15,8 @@ ahk_video = ['video-194633420_456239017', 'video-194633420_456239019', 'video-19
 samp_sp = ['samp', 'самп']
 csgo_sp = ['ксго', 'csgo', 'cs:go', 'кс:го']
 s = "Выбери и напиши нужный пункт: "
-csgo_k = "ахк (не читы), читы."
-samp_k = "клео, чистая гта + самп"
+csgo_k = "ахк (не читы), читы"
+samp_k = "клео, чистая гта + самп, программы для моддинга"
 cleo = ['сбив анимации - https://yadi.sk/d/GYj1iaWHCnMYfA', 'аим - https://yadi.sk/d/GE2Ox1UdXiCHCA',
         'антиотдача - https://yadi.sk/d/9dv4xgRbPsXgnw', 'антидб - https://yadi.sk/d/7rpl4rrTGXkmaw',
         'бесконечный бег - https://yadi.sk/d/3UTwr4wv573-uA', 'быстрая смерть - https://yadi.sk/d/5U4WUOJqerEddw',
@@ -26,6 +26,8 @@ choise = "Выбери и напиши игру из списка доступн
 games = ['CS:GO', 'SAMP']
 antistill = "Перед скачиванием клео рекомендуем скачать антистиллер" \
             " и проверять файлы там - https://yadi.sk/d/hbfL-lxcXKWImg"
+modding_samp = ['CLEO 4 - https://yadi.sk/d/90hA5JD-ng3isg', 'CRAZY IMG Editor - https://yadi.sk/d/InOV1TilFW-OTg',
+                'TXD Workshop v5.3 - https://yadi.sk/d/eDSla1XgeoJKug']
 
 
 def start():
@@ -83,6 +85,12 @@ def samp():
                         vk.method("messages.send",
                                   {"peer_id": id, "message": i, "random_id": random.randint(1, 2147483647)})
                     start()
+                elif body.lower() == "программы для моддинга":
+                    for i in modding_samp:
+                        vk.method("messages.send",
+                                {"peer_id": id, "message": i,  "random_id": random.randint(1, 2147483647)})
+                    vk.method("messages.send",
+                              {"peer_id": id, "message": m, "random_id": random.randint(1, 2147483647)})
                 elif body.lower() == "чистая гта + самп":
                     vk.method("messages.send",
                               {"peer_id": id, "message":
