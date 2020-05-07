@@ -5,7 +5,7 @@ from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 import vk_api
 import sys
 from vk_api.longpoll import VkLongPoll, VkEventType
-token = "e76676f4e4fd69eecfc5a57854579012b05709ada8e4a5495ac01b1e121a2af71c5d1f5e627679406608a"
+token = "*"
 vk = vk_api.VkApi(token=token)
 vk._auth_token()
 ahk = ['autofire для пистолета - https://yadi.sk/d/CmnTix9nsCLaXA',
